@@ -45,7 +45,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-primary">
                     <i class="fas fa-save"></i> Simpan
                 </button>
                 <a href="{{ route('admin.users') }}" class="btn btn-secondary">

@@ -119,52 +119,35 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <!-- Container wrapper -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <!-- Navbar brand -->
-            <a class="navbar-brand me-2" href="#">
-                <img src="{{ asset('images/logo.png') }}" height="50" alt="MDB Logo"
-                    loading="lazy" style="margin-top: -1px;" />
+            <a class="navbar-brand" href="{{ route('landing') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="ImmiBot Logo" height="40">
+                ImmiBot
             </a>
-
-            <!-- Toggle button -->
-            <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarButtonsExample"
-                aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
 
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('chat.index') }}">Dashboard</a>
-                    </li>
                 </ul>
-                <!-- Left links -->
-
-                <div class="d-flex align-items-center">
-                    <a href="#" class="btn btn-success me-3">
-                        Chat CS
-                    </a>
-                    <form method="POST" action="{{ route('logout') }}">
+                <div class="d-flex ms-lg-3">
+                    <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button data-mdb-ripple-init type="submit" class="btn btn-danger me-3">
-                            Logout
-                        </button>
+                        <button type="submit" class="btn btn-primary">Logout</button>
                     </form>
-
                 </div>
             </div>
-            <!-- Collapsible wrapper -->
         </div>
-        <!-- Container wrapper -->
     </nav>
-    <!-- Navbar -->
-    <div class="container">
+
+    <!-- Tambahkan margin-top agar konten tidak ketiban navbar -->
+    <div class="container mt-5 pt-4">
         <div class="chat-container">
-            <div class="chat-header">
+            <div class="chat-header mb-3">
                 <h4>ImmiBot 🤖</h4>
             </div>
             <div class="chat-box" id="chat-box">
@@ -173,16 +156,23 @@
                         Halo! Ada yang bisa dibantu terkait Imigrasi?
                     </div>
                 </div>
+
+                <!-- FAQ Suggestion -->
                 <div id="faq-suggestions" class="my-3">
                     <div class="d-grid gap-2 col-10 mx-auto">
-                        <button type="button" class="btn btn-outline-primary faq-btn">Apa saja jenis-jenis visa?</button>
-                        <button type="button" class="btn btn-outline-primary faq-btn">Bagaimana cara membuat paspor?</button>
-                        <button type="button" class="btn btn-outline-primary faq-btn">Berapa lama proses perpanjangan KITAS?</button>
+                        <button type="button" class="btn btn-outline-primary faq-btn">Apa saja jenis-jenis
+                            visa?</button>
+                        <button type="button" class="btn btn-outline-primary faq-btn">Bagaimana cara membuat
+                            paspor?</button>
+                        <button type="button" class="btn btn-outline-primary faq-btn">Berapa lama proses perpanjangan
+                            KITAS?</button>
                         <button type="button" class="btn btn-outline-primary faq-btn">Chat dengan CS</button>
                     </div>
                 </div>
             </div>
-            <div class="chat-input">
+
+            <!-- Chat Input -->
+            <div class="chat-input mt-3">
                 <form id="chat-form">
                     <div class="input-group">
                         <input type="text" id="message-input" class="form-control"
@@ -211,7 +201,7 @@
 
         // Event listener untuk tombol FAQ
         if (faqContainer) {
-            faqContainer.addEventListener('click', function(e) {
+            faqContainer.addEventListener('click', function (e) {
                 if (e.target && e.target.classList.contains('faq-btn')) {
                     const question = e.target.innerText;
                     input.value = question;

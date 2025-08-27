@@ -56,7 +56,12 @@ class ChatController extends Controller
             return response()->json(['response' => $aiReply]);
 
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
+            \Log::error("Error pada ChatController: " . $e->getMessage());
+
+            return response()->json([
+                'error' => 'Mohon maaf, ImmiBot tidak dapat bekerja saat ini. Silakan coba kembali nanti.'
+            ], 500);
         }
+
     }
 }

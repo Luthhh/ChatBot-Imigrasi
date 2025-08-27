@@ -158,13 +158,12 @@
                         <a class="nav-link" href="#features">Fitur</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">Cara Kerja</a>
+                    <li class="nav-item">
                         <a class="nav-link" href="#testimonials">Testimoni</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontak</a>
                     </li>
                 </ul>
                 <div class="d-flex ms-lg-3">
@@ -286,6 +285,44 @@
                     <h4 class="fw-bold">Bahasa yang Mudah Dipahami</h4>
                     <p class="text-muted">Tidak perlu bingung dengan istilah hukum yang rumit. ImmiBot menjelaskan
                         semuanya dengan bahasa yang sederhana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="features-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Bagaimana Cara Kerjanya?</h2>
+                <p class="lead text-muted">Hanya dalam 3 langkah mudah untuk mendapatkan informasi.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <!-- Step 1 -->
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="feature-icon me-4" style="font-size: 3rem;"><i class="fas fa-user-plus"></i></div>
+                        <div>
+                            <h4 class="fw-bold">1. Buat Akun</h4>
+                            <p class="text-muted">Daftarkan diri Anda secara gratis untuk memulai percakapan.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="feature-icon me-4" style="font-size: 3rem;"><i class="fas fa-keyboard"></i></div>
+                        <div>
+                            <h4 class="fw-bold">2. Ajukan Pertanyaan</h4>
+                            <p class="text-muted">Silakan tuliskan pertanyaan terkait layanan keimigrasian yang ingin Anda ketahui.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="d-flex align-items-start">
+                        <div class="feature-icon me-4" style="font-size: 3rem;"><i class="fas fa-magic"></i></div>
+                        <div>
+                            <h4 class="fw-bold">3. Dapatkan Jawaban Instan</h4>
+                            <p class="text-muted">ImmiBot akan langsung memberikan jawaban yang relevan dan akurat untuk membantu Anda.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -476,8 +513,8 @@
                 <!-- Alamat Kantor -->
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                     <!-- Logo -->
-                    <img src="images/image.png" alt="Logo Kantor"
-                        style="width: 400px; height: auto; margin-bottom: 20px;">
+                    <img src="{{ asset('images/image.png') }}" alt="Logo Kantor"
+                        class="img-fluid mb-4" style="max-width: 300px;">
 
                     <h6 class="text-uppercase fw-bold mb-3">Alamat Kantor</h6>
                     <p>
